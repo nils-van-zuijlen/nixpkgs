@@ -2,7 +2,6 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  fetchpatch2,
   poetry-core,
   pytestCheckHook,
   pythonOlder,
