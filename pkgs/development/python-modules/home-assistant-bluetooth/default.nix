@@ -51,6 +51,14 @@ buildPythonPackage rec {
     pytestCheckHook
   ];
 
+  disabledTests = [
+    # habluetooth/bleak compat issues
+    "test_model_from_scanner"
+    "test_from_device_and_advertisement_data"
+    "test_construct_service_info_bleak"
+    "test_pyobjc_compat"
+  ];
+
   meta = with lib; {
     description = "Basic bluetooth models used by Home Assistant";
     changelog = "https://github.com/home-assistant-libs/home-assistant-bluetooth/blob/v${version}/CHANGELOG.md";
